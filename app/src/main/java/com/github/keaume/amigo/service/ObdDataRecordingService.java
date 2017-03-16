@@ -36,7 +36,7 @@ public class ObdDataRecordingService extends Service implements SharedPreference
 
     private LocalBroadcastManager localBroadcastManager;
     private SharedPreferences sharedPrefs;
-    private Obd2FunDataSource obd2FunDataSource;
+    private amigoDataSource amigoDataSource;
 
     private final HashSet<ObdCommandType> registeredObdCommandTypes = new HashSet<>();
 
@@ -60,7 +60,7 @@ public class ObdDataRecordingService extends Service implements SharedPreference
             if (obdCommandJobResult.getState() == ObdCommandJob.State.FINISHED) {
                 if (!obdCommandJobResult.getRawResult().isEmpty()) {
                     Timber.d("Saving obdCommandJobResult into database");
-                    obd2FunDataSource.saveObdCommandJobResult(obdCommandJobResult);
+                    amigoDataSource.saveObdCommandJobResult(obdCommandJobResult);
                 } else {
                     Timber.e("No data in obdCommandJobResult, discarding");
                 }
@@ -85,7 +85,7 @@ public class ObdDataRecordingService extends Service implements SharedPreference
         localBroadcastManager.registerReceiver(obdConnectionStateReceiver, new IntentFilter(ObdBroadcastIntent.OBD_CONNECTION_STATE));
 
         Timber.d("Opening database");
-        obd2FunDataSource = new Obd2FunDataSource(getApplicationContext());
+        amigoDataSource = new amigoDataSource(getApplicationContext());
 
         registerForObdCommandJobResultBroadcasts();
     }
