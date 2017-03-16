@@ -54,7 +54,7 @@ import com.github.keaume.amigo.obd.ObdCommandJob;
 import com.github.keaume.amigo.obd.ObdCommandJobResult;
 import com.github.keaume.amigo.obd.ObdCommandType;
 import com.github.keaume.amigo.obd.ObdConnectionState;
-import com.github.keaume.amigo.sql.Obd2FunDataSource;
+import com.github.keaume.amigo.sql.amigoDataSource;
 import com.github.keaume.amigo.sql.TroubleCodesResult;
 import timber.log.Timber;
 
@@ -62,7 +62,7 @@ public class TroubleCodesFragment extends Fragment {
 
     private LocalBroadcastManager localBroadcastManager;
     private ArrayAdapter<String> troubleCodesArrayAdapter;
-    private Obd2FunDataSource obd2FunDataSource;
+    private amigoDataSource amigoDataSource;
     private ViewSwitcher viewSwitcher;
     private FloatingActionMenu floatingActionMenu;
     private ArrayList<FloatingActionButton> floatingActionButtons;
@@ -158,7 +158,7 @@ public class TroubleCodesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         localBroadcastManager = LocalBroadcastManager.getInstance(getActivity().getApplicationContext());
-        obd2FunDataSource = new Obd2FunDataSource(getActivity().getApplicationContext());
+        amigoDataSource = new amigoDataSource(getActivity().getApplicationContext());
         troubleCodesArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1);
         troubleCodesListHeader = new TextView(getActivity());
         floatingActionButtons = new ArrayList<>();
@@ -384,7 +384,7 @@ public class TroubleCodesFragment extends Fragment {
                 break;
         }
         String currentVin = ((GetCurrentVinInterface)getActivity()).getCurrentVin();
-        String nameForVin = obd2FunDataSource.getNameForVin(currentVin);
+        String nameForVin = amigoDataSource.getNameForVin(currentVin);
         if (nameForVin == null) {
             nameForVin = getString(R.string.unknown_vin_name);
         }
@@ -407,7 +407,7 @@ public class TroubleCodesFragment extends Fragment {
                 type = getString(R.string.trouble_codes_fragment_list_view_title_permanent_trouble_codes);
                 break;
         }
-        String nameForVin = obd2FunDataSource.getNameForVin(troubleCodesResult.getVin());
+        String nameForVin = amigoDataSource.getNameForVin(troubleCodesResult.getVin());
         if (nameForVin == null) {
             nameForVin = getString(R.string.unknown_vin_name);
         }
@@ -528,7 +528,7 @@ public class TroubleCodesFragment extends Fragment {
         for (String troubleCodeWithDescription : troubleCodesWithDescriptionList) {
             troubleCodesList.add(new StringTokenizer(troubleCodeWithDescription, getString(R.string.trouble_codes_fragment_trouble_code_separator)).nextToken());
         }
-        obd2FunDataSource.saveTroubleCodesList(((GetCurrentVinInterface)getActivity()).getCurrentVin(), currentTroubleCodesType, troubleCodesList);
+        amigoDataSource.saveTroubleCodesList(((GetCurrentVinInterface)getActivity()).getCurrentVin(), currentTroubleCodesType, troubleCodesList);
         troubleCodesAlreadySaved = true;
     }
 
@@ -553,7 +553,7 @@ public class TroubleCodesFragment extends Fragment {
 
     private void showManageSavedTroubleCodesDialog() {
         Timber.d("Showing manage saved trouble codes dialog");
-        final TroubleCodesResultAdapter troubleCodesResultAdapter = new TroubleCodesResultAdapter(getActivity(), obd2FunDataSource.getAllAvailableTroubleCodesResults());
+        final TroubleCodesResultAdapter troubleCodesResultAdapter = new TroubleCodesResultAdapter(getActivity(), amigoDataSource.getAllAvailableTroubleCodesResults());
         if (troubleCodesResultAdapter.isEmpty()) {
             new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.alert_dialog_no_saved_trouble_codes_title)
@@ -643,7 +643,7 @@ public class TroubleCodesFragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Timber.d("Deleting all saved trouble codes");
-                        obd2FunDataSource.deleteAllTroubleCodesResults();
+                        amigoDataSource.deleteAllTroubleCodesResults();
                     }
                 })
                 .show();
@@ -658,7 +658,7 @@ public class TroubleCodesFragment extends Fragment {
             Timber.d("Deleting a trouble codes result");
             //Offset -1 for header
             TroubleCodesResult troubleCodesResult = getItem(which - 1);
-            obd2FunDataSource.deleteTroubleCodesResultForDate(troubleCodesResult.getDate());
+            amigoDataSource.deleteTroubleCodesResultForDate(troubleCodesResult.getDate());
             remove(troubleCodesResult);
         }
 
