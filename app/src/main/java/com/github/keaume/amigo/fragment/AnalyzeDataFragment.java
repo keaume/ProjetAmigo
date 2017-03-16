@@ -48,15 +48,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import com.github.zeroxfelix.amigo.R;
-import com.github.zeroxfelix.amigo.export.CsvExport;
-import com.github.zeroxfelix.amigo.interfaces.SetActionBarTitleInterface;
-import com.github.zeroxfelix.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
-import com.github.zeroxfelix.amigo.obd.ObdCommandType;
-import com.github.zeroxfelix.amigo.sql.amigoDataSource;
-import com.github.zeroxfelix.amigo.sql.ObdData;
-import com.github.zeroxfelix.amigo.ui.Session;
-import com.github.zeroxfelix.amigo.ui.TextViewDatePickerDialog;
+import com.github.keaume.amigo.R;
+import com.github.keaume.amigo.export.CsvExport;
+import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
+import com.github.keaume.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
+import com.github.keaume.amigo.obd.ObdCommandType;
+import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.ObdData;
+import com.github.keaume.amigo.ui.Session;
+import com.github.keaume.amigo.ui.TextViewDatePickerDialog;
 import timber.log.Timber;
 
 public class AnalyzeDataFragment extends Fragment implements View.OnTouchListener {
