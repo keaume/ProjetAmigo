@@ -1,0 +1,11 @@
+package com.github.zeroxfelix.obd2fun.obd;
+
+public enum ObdConnectionState {
+    DISCONNECTED,
+    CONNECTED,
+    CONNECTING_FAILED,
+    CONNECTING_FAILED_BT_NOT_SUPPORTED,
+    CONNECTING_FAILED_BT_IS_DISABLED,
+    CONNECTING_FAILED_BT_NO_DEVICE_SELECTED,
+    CONNECTION_LOST
+}
