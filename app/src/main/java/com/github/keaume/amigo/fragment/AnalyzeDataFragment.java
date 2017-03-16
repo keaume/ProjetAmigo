@@ -48,15 +48,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import com.github.zeroxfelix.obd2fun.R;
-import com.github.zeroxfelix.obd2fun.export.CsvExport;
-import com.github.zeroxfelix.obd2fun.interfaces.SetActionBarTitleInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.SetSelectedDrawerMenuItemInterface;
-import com.github.zeroxfelix.obd2fun.obd.ObdCommandType;
-import com.github.zeroxfelix.obd2fun.sql.Obd2FunDataSource;
-import com.github.zeroxfelix.obd2fun.sql.ObdData;
-import com.github.zeroxfelix.obd2fun.ui.Session;
-import com.github.zeroxfelix.obd2fun.ui.TextViewDatePickerDialog;
+import com.github.zeroxfelix.amigo.R;
+import com.github.zeroxfelix.amigo.export.CsvExport;
+import com.github.zeroxfelix.amigo.interfaces.SetActionBarTitleInterface;
+import com.github.zeroxfelix.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
+import com.github.zeroxfelix.amigo.obd.ObdCommandType;
+import com.github.zeroxfelix.amigo.sql.amigoDataSource;
+import com.github.zeroxfelix.amigo.sql.ObdData;
+import com.github.zeroxfelix.amigo.ui.Session;
+import com.github.zeroxfelix.amigo.ui.TextViewDatePickerDialog;
 import timber.log.Timber;
 
 public class AnalyzeDataFragment extends Fragment implements View.OnTouchListener {
@@ -73,7 +73,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
     private long maxXYx;
 
     private List<Session> sessionList;
-    private Obd2FunDataSource dataSource;
+    private amigoDataSource dataSource;
     private ArrayList<ObdData> rawObdData;
     private List<ObdCommandType> commandTypesInSession = new ArrayList<>();
     private Spinner commandTypeSpinner;
@@ -98,7 +98,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
         Timber.d("onCreate called");
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        dataSource = new Obd2FunDataSource(getActivity().getApplicationContext());
+        dataSource = new amigoDataSource(getActivity().getApplicationContext());
 
         if (savedInstanceState != null) {
             Timber.d("Restoring variables previous states");
@@ -549,7 +549,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
 
     private void exportSession(){
         final Activity activity = getActivity();
-        final Obd2FunDataSource dataSource = new Obd2FunDataSource(activity);
+        final amigoDataSource dataSource = new amigoDataSource(activity);
         LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") final View exportSessionView = inflater.inflate(R.layout.export_session_popup, null);
         new AlertDialog.Builder(activity)
@@ -591,7 +591,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
 
     private void exportBetweenDates(){
         final Activity activity = getActivity();
-        final Obd2FunDataSource dataSource = new Obd2FunDataSource(activity);
+        final amigoDataSource dataSource = new amigoDataSource(activity);
         final LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") final View exportBetweenDatesView = inflater.inflate(R.layout.export_between_dates_popup, null);
         new AlertDialog.Builder(activity)
