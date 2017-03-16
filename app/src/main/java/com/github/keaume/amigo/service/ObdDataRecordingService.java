@@ -24,7 +24,7 @@ import com.github.keaume.amigo.obd.ObdCommandJob;
 import com.github.keaume.amigo.obd.ObdCommandJobResult;
 import com.github.keaume.amigo.obd.ObdCommandType;
 import com.github.keaume.amigo.obd.ObdConnectionState;
-import com.github.keaume.amigo.sql.Obd2FunDataSource;
+import com.github.keaume.amigo.sql.amigoDataSource;
 import timber.log.Timber;
 
 public class ObdDataRecordingService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener {
