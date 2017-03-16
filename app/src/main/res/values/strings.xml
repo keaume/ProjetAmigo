@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OBD2Fun</string>
+    <string name="app_name">Amigo</string>
     <string name="obd_service_name">OBD Verbindung</string>
     <string name="obd_recording_service_name">Datenaufzeichnung</string>
 
