@@ -32,23 +32,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.zeroxfelix.obd2fun.Obd2FunApplication;
-import com.github.zeroxfelix.obd2fun.R;
-import com.github.zeroxfelix.obd2fun.fragment.AnalyzeDataFragment;
-import com.github.zeroxfelix.obd2fun.fragment.ManageVehiclesFragment;
-import com.github.zeroxfelix.obd2fun.fragment.ReadDataFragment;
-import com.github.zeroxfelix.obd2fun.fragment.ServiceConnectionFragment;
-import com.github.zeroxfelix.obd2fun.fragment.SettingsFragment;
-import com.github.zeroxfelix.obd2fun.fragment.TroubleCodesFragment;
-import com.github.zeroxfelix.obd2fun.interfaces.GetCurrentSessionIdInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.GetCurrentVinInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.GetIsObdConnectionActiveInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.SetActionBarTitleInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.SetDrawerStateInterface;
-import com.github.zeroxfelix.obd2fun.interfaces.SetSelectedDrawerMenuItemInterface;
-import com.github.zeroxfelix.obd2fun.obd.ObdBroadcastIntent;
-import com.github.zeroxfelix.obd2fun.obd.ObdConnectionState;
-import com.github.zeroxfelix.obd2fun.sql.Obd2FunDataSource;
+import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.R;
+import com.github.keaume.amigo.fragment.AnalyzeDataFragment;
+import com.github.keaume.amigo.fragment.ManageVehiclesFragment;
+import com.github.keaume.amigo.fragment.ReadDataFragment;
+import com.github.keaume.amigo.fragment.ServiceConnectionFragment;
+import com.github.keaume.amigo.fragment.SettingsFragment;
+import com.github.keaume.amigo.fragment.TroubleCodesFragment;
+import com.github.keaume.amigo.interfaces.GetCurrentSessionIdInterface;
+import com.github.keaume.amigo.interfaces.GetCurrentVinInterface;
+import com.github.keaume.amigo.interfaces.GetIsObdConnectionActiveInterface;
+import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
+import com.github.keaume.amigo.interfaces.SetDrawerStateInterface;
+import com.github.keaume.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
+import com.github.keaume.amigo.obd.ObdBroadcastIntent;
+import com.github.keaume.amigo.obd.ObdConnectionState;
+import com.github.keaume.amigo.sql.amigoDataSource;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartScreenCallback, SetActionBarTitleInterface, SetSelectedDrawerMenuItemInterface, SetDrawerStateInterface, GetIsObdConnectionActiveInterface, GetCurrentVinInterface, GetCurrentSessionIdInterface {
@@ -412,8 +412,8 @@ public class MainActivity extends AppCompatActivity implements PreferenceFragmen
         }
         if (vin != null && isObdConnectionActive()) {
             statusVin.setText(vin);
-            if(Obd2FunApplication.getNameForVin(vin) != null){
-                statusVehicle.setText(Obd2FunApplication.getNameForVin(vin));
+            if(amigoApplication.getNameForVin(vin) != null){
+                statusVehicle.setText(amigoApplication.getNameForVin(vin));
             }
             else{
                 statusVehicle.setText(getString(R.string.vehicle_popup_new_no_name));
@@ -425,7 +425,7 @@ public class MainActivity extends AppCompatActivity implements PreferenceFragmen
     }
 
     private void vehiclePopup(final String vin){
-        final Obd2FunDataSource dataSource = new Obd2FunDataSource(this);
+        final amigoDataSource dataSource = new amigoDataSource(this);
         if (dataSource.getNameForVin(vin) == null) {
             Timber.d("Unknown VIN: '%s', showing vehiclePopup", vin);
             @SuppressLint("InflateParams") final View popupView = this.getLayoutInflater().inflate(R.layout.vehicle_popup, null);
