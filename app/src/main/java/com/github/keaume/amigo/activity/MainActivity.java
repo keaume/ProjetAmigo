@@ -1,4 +1,4 @@
-package com.github.zeroxfelix.obd2fun.activity;
+package com.github.keaume.amigo.activity;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
