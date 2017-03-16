@@ -12,19 +12,19 @@
  <string name="main_activity_drawer_menu_read_data">Lecture de données</string>
  <string name="main_activity_drawer_menu_analyze_data">Analyse des données</string>
  <string name="main_activity_drawer_menu_trouble_codes">Lecture des codes erreurs</string>
- <string name="main_activity_drawer_menu_manage_connection"> Connexion à l'OBD</string>
+ <string name="main_activity_drawer_menu_manage_connection"> Connexion à l\'OBD</string>
  <string name="main_activity_drawer_menu_manage_vehicles">Gestion du véhicule</string>
  <string name="main_activity_drawer_menu_settings">Reglages</string>
  <string name="settings_fragment_menu_request_backup">Sauvegarde</string>
  <string name="settings_fragment_menu_save_log_to_file">Logs actuels protégés</string>
- <string name="settings_fragment_menu_about_the_app">A propos d'AmiGo</string>
- <string name="trouble_codes_fragment_menu_save_trouble_codes">Codes d'erreurs sauvegardés</string>
- <string name="trouble_codes_fragment_menu_manage_saved_trouble_codes">Gestion des Codes d'erreurs</string>
+ <string name="settings_fragment_menu_about_the_app">A propos d\'AmiGo</string>
+ <string name="trouble_codes_fragment_menu_save_trouble_codes">Codes d\'erreurs sauvegardés</string>
+ <string name="trouble_codes_fragment_menu_manage_saved_trouble_codes">Gestion des Codes d\'erreurs</string>
  <string name="trouble_codes_fragment_menu_delete_all_saved_trouble_codes">Supprimer les codes erreurs enregistrés</string>
 
  <string name="connection_settings_category_title">Paramètres de connexion</string>
  <string name="connect_on_startup_preference_title">Connexion automatique</string>
- <string name="interface_type_preference_title">Type d'Interface</string>
+ <string name="interface_type_preference_title">Type d\'Interface</string>
  <string name="bluetooth_device_preference_title">Appareil Bluetooth </string>
  <string name="obd_settings_category_title">OBD2 Réglages</string>
  <string name="obd_protocol_preference_title">OBD2 Procotole</string>
@@ -41,7 +41,7 @@
 
  <string name="connect_on_startup_preference_default">false</string>
  <string name="interface_type_preference_default">ELM327 Bluetooth</string>
- <string name="bluetooth_device_preference_default">Pas d'Interface selectionné</string>
+ <string name="bluetooth_device_preference_default">Pas d\'Interface selectionné</string>
  <string name="obd_protocol_preference_default">AUTO</string>
  <string name="obd_update_delay_preference_default">1</string>
  <string name="imperial_units_preference_default">false</string>
@@ -49,15 +49,15 @@
  <string name="enable_logging_preference_default">false</string>
  <string name="enable_save_stacktrace_preference_default">false</string>
 
- <string name="could_not_parse_as_double">%1$s n'est pas un nombre valide!</string>
- <string name="obd_connecting">Connexion à l'Interface OBD…</string>
- <string name="obd_connected">L'Interface OBD est connecté</string>
- <string name="obd_disconnected">L'Interface OBD est déconnecté</string>
- <string name="obd_connecting_failed">Connexion à l'Interface OBD échouée</string>
- <string name="obd_connection_lost">Connexion à l'Interface OBD perdue</string>
+ <string name="could_not_parse_as_double">%1$s n\'est pas un nombre valide!</string>
+ <string name="obd_connecting">Connexion à l\'Interface OBD…</string>
+ <string name="obd_connected">L\'Interface OBD est connecté</string>
+ <string name="obd_disconnected">L\'Interface OBD est déconnecté</string>
+ <string name="obd_connecting_failed">Connexion à l\'Interface OBD échouée</string>
+ <string name="obd_connection_lost">Connexion à l\'Interface OBD perdue</string>
  <string name="bluetooth_not_supported">Connexion Bluetooth échouée !</string>
  <string name="bluetooth_disabled">le Bluetooth est désactivé !</string>
- <string name="bluetooth_no_selected_device">Le Bluetooth n'est pas actif!</string>
+ <string name="bluetooth_no_selected_device">Le Bluetooth n\'est pas actif!</string>
  <string name="obd_recording_active">Enregistrement OBD actif</string>
 
  <string name="trouble_codes_fragment_fab_read_trouble_codes_text">Lecture des Codes erreurs</string>
@@ -90,7 +90,7 @@
  <string name="trouble_codes_type_permanent">Permanent</string>
 
  <string name="alert_dialog_quit_app_title">Quitter</string>
- <string name="alert_dialog_quit_app_message">Voulez-vous vraiment quitter l'application ?</string>
+ <string name="alert_dialog_quit_app_message">Voulez-vous vraiment quitter l\'application ?</string>
  <string name="alert_dialog_clear_trouble_codes_title">Codes erreurs supprimés</string>
  <string name="alert_dialog_clear_trouble_codes_message">Voulez-vous vraiment supprimer ces Codes erreurs ?</string>
  <string name="alert_dialog_web_search_title">Recherche de Codes erreurs…</string>
@@ -164,14 +164,14 @@
 
  <string name="about_the_app">
  \u0020OBD2Fun\n\n
- Cette App fonctionne sous l'Apache License 2.0\n
+ Cette App fonctionne sous l\'Apache License 2.0\n
  \u00A92016 Antoine Toenz, Valentin Sutter\n\n
  Cette App fonctionne avec la bibliothèque:\n\n
  Timber, \u00A92013 Jake Wharton, Apache License 2.0\n
  FloatingActionButton, \u00A92015 Dmytro Tarianyk, Apache License 2.0\n
  AndroidPlot, \u00A92014 AndroidPlot.com, Apache License 2.0\n
  OBD-Java-API, \u00A92016 Paulo Pires, Apache License 2.0\n\n
- Cette App fonctionne avec la banque de Code d'erreurs OBD-II de:\n\n
+ Cette App fonctionne avec la banque de Code d\'erreurs OBD-II de:\n\n
  android-obd-reader, \u00A92013 Paulo Pires, Apache License 2.0
  </string>
 </resources>
