@@ -28,8 +28,8 @@ import com.github.pires.obd.enums.ObdProtocols;
 import java.util.ArrayList;
 import java.util.Set;
 
-import com.github.keaume.amigo.Obd2FunApplication;
-import com.github.keaume.amigo.Obd2FunLogUtility;
+import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.amigoLogUtility;
 import com.github.keaume.amigo.R;
 import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
 import com.github.keaume.amigo.interfaces.SetDrawerStateInterface;
@@ -125,7 +125,7 @@ public class SettingsFragment extends PreferenceFragmentCompatFix implements Sha
                 requestBackup();
                 return true;
             case R.id.save_log_to_file:
-                Obd2FunLogUtility.saveLogToExternalStorage();
+                amigoLogUtility.saveLogToExternalStorage();
                 return true;
             case R.id.about_the_app:
                 openAboutDialog();
@@ -319,8 +319,8 @@ public class SettingsFragment extends PreferenceFragmentCompatFix implements Sha
     }
 
     public static int getObdCommandJobDelay() {
-        String defaultObdCommandJobDelayString = Obd2FunApplication.getResourceString(R.string.obd_update_delay_preference_default);
-        String obdCommandJobDelayString = Obd2FunApplication.getPreferenceString(OBD_UPDATE_DELAY_KEY, defaultObdCommandJobDelayString);
+        String defaultObdCommandJobDelayString = amigoApplication.getResourceString(R.string.obd_update_delay_preference_default);
+        String obdCommandJobDelayString = amigoApplication.getPreferenceString(OBD_UPDATE_DELAY_KEY, defaultObdCommandJobDelayString);
         int obdCommandJobDelay;
         try {
             obdCommandJobDelay = (int) (Double.parseDouble(obdCommandJobDelayString) * 1000);
