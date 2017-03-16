@@ -10,13 +10,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import com.github.zeroxfelix.obd2fun.sql.ObdData;
+import com.github.keaume.amigo.sql.ObdData;
 import timber.log.Timber;
 
 public class CsvExport{
 
     private static final String EXTERNAL_STORAGE_EXPORT_DIRECTORY = "export";
-    private static final String EXTERNAL_STORAGE_MAIN_DIRECTORY = "obd2fun";
+    private static final String EXTERNAL_STORAGE_MAIN_DIRECTORY = "amigo";
     private final String fileName;
     private final ArrayList<ObdData> obdDataList;
 
