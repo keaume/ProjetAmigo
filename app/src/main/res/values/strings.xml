@@ -1,0 +1,173 @@
+<resources>
+    <string name="app_name">OBD2Fun</string>
+    <string name="obd_service_name">OBD Verbindung</string>
+    <string name="obd_recording_service_name">Datenaufzeichnung</string>
+
+    <string name="main_activity_drawer_open">Navigation öffnen</string>
+    <string name="main_activity_drawer_close">Navigation schließen</string>
+    <string name="main_activity_drawer_menu_read_data">Daten auslesen</string>
+    <string name="main_activity_drawer_menu_analyze_data">Daten auswerten</string>
+    <string name="main_activity_drawer_menu_trouble_codes">Fehlercodes auslesen</string>
+    <string name="main_activity_drawer_menu_manage_connection">OBD Verbindung</string>
+    <string name="main_activity_drawer_menu_manage_vehicles">Fahrzeuge verwalten</string>
+    <string name="main_activity_drawer_menu_settings">Einstellungen</string>
+    <string name="settings_fragment_menu_request_backup">Backup anfordern</string>
+    <string name="settings_fragment_menu_save_log_to_file">Aktuelle Logs sichern</string>
+    <string name="settings_fragment_menu_about_the_app">Über die App</string>
+    <string name="trouble_codes_fragment_menu_save_trouble_codes">Fehlercodes speichern</string>
+    <string name="trouble_codes_fragment_menu_manage_saved_trouble_codes">Gespeicherte Fehlercodes verwalten</string>
+    <string name="trouble_codes_fragment_menu_delete_all_saved_trouble_codes">Gespeicherte Fehlercodes löschen</string>
+
+    <string name="connection_settings_category_title">Verbindungseinstellungen</string>
+    <string name="connect_on_startup_preference_title">Automatisch verbinden</string>
+    <string name="interface_type_preference_title">Interface Typ</string>
+    <string name="bluetooth_device_preference_title">Bluetooth Gerät</string>
+    <string name="obd_settings_category_title">OBD2 Einstellungen</string>
+    <string name="obd_protocol_preference_title">OBD2 Protokoll</string>
+    <string name="obd_update_delay_preference_title">Updatehäufigkeit</string>
+    <string name="obd_update_delay_preference_summary">Alle %1$s Sekunden</string>
+    <string name="imperial_units_preference_title">Imperiale Einheiten verwenden</string>
+    <string name="obd_recording_category_title">OBD2 Datenaufzeichnung</string>
+    <string name="obd_recording_preference_title">Datenaufzeichnung aktivieren</string>
+    <string name="obd_recording_commands_preference_title">OBD2 Kommandos</string>
+    <string name="obd_recording_commands_preference_summary">Die aufzuzeichnenden OBD2 Kommandos</string>
+    <string name="logging_category_title">Logging (Prozess-Neustart erforderlich)</string>
+    <string name="enable_logging_preference_title">Logging aktivieren</string>
+    <string name="enable_save_stacktrace_preference_title">Logs bei Abstürzen sichern</string>
+
+    <string name="connect_on_startup_preference_default">false</string>
+    <string name="interface_type_preference_default">ELM327 Bluetooth</string>
+    <string name="bluetooth_device_preference_default">Kein Interface ausgewählt</string>
+    <string name="obd_protocol_preference_default">AUTO</string>
+    <string name="obd_update_delay_preference_default">1</string>
+    <string name="imperial_units_preference_default">false</string>
+    <string name="obd_recording_preference_default">false</string>
+    <string name="enable_logging_preference_default">false</string>
+    <string name="enable_save_stacktrace_preference_default">false</string>
+
+    <string name="could_not_parse_as_double">%1$s ist keine valide Zahl!</string>
+    <string name="obd_connecting">Verbinde mit OBD2 Interface…</string>
+    <string name="obd_connected">Verbindung mit OBD2 Interface hergestellt</string>
+    <string name="obd_disconnected">Verbindung mit OBD2 Interface getrennt</string>
+    <string name="obd_connecting_failed">Verbindung mit OBD2 Interface fehlgeschlagen</string>
+    <string name="obd_connection_lost">Verbindung mit OBD2 Interface verloren</string>
+    <string name="bluetooth_not_supported">Dieses Gerät unterstützt kein Bluetooth!</string>
+    <string name="bluetooth_disabled">Bluetooth ist abgeschaltet, bitte einschalten!</string>
+    <string name="bluetooth_no_selected_device">Es wurde keine gepaartes Bluetooth Gerät ausgewählt!</string>
+    <string name="obd_recording_active">OBD2 Datenaufzeichung aktiv</string>
+
+    <string name="trouble_codes_fragment_fab_read_trouble_codes_text">Fehlercodes auslesen</string>
+    <string name="trouble_codes_fragment_fab_read_pending_trouble_codes_text">Ausstehende Fehlercodes auslesen</string>
+    <string name="trouble_codes_fragment_fab_read_permanent_trouble_codes_text">Permanente Fehlercodes auslesen</string>
+    <string name="trouble_codes_fragment_fab_clear_trouble_codes_text">Fehlercodes löschen</string>
+    <string name="trouble_codes_fragment_list_view_title_trouble_codes">Fehlercodes</string>
+    <string name="trouble_codes_fragment_list_view_title_pending_trouble_codes">Ausstehende Fehlercodes</string>
+    <string name="trouble_codes_fragment_list_view_title_permanent_trouble_codes">Permanente Fehlercodes</string>
+    <string name="trouble_codes_fragment_list_view_title_template">%1$s\nFahrzeugname: %2$s\nVIN: %3$s\nAusgelesen: %4$s</string>
+    <string name="trouble_codes_fragment_list_view_title_now">Jetzt</string>
+    <string name="trouble_codes_fragment_list_view_unknown_trouble_code">Unbekannter Fehlercode</string>
+    <string name="trouble_codes_fragment_text_view_no_codes_loaded">Fehlercodes können über die Menüs ausgelesen oder geladen werden.</string>
+    <string name="trouble_codes_fragment_text_view_no_codes_received">Es sind keine Fehlercodes im Steuergerät gespeichert.</string>
+    <string name="trouble_codes_fragment_text_view_no_pending_codes_received">Es sind keine ausstehenden Fehlercodes im Steuergerät gespeichert.</string>
+    <string name="trouble_codes_fragment_text_view_no_permanent_codes_received">Es sind keine permanenten Fehlercodes im Steuergerät gespeichert.</string>
+    <string name="trouble_codes_fragment_text_view_reading_codes_error">Es ist ein Fehler beim Auslesen der Fehlercodes aufgetreten.</string>
+    <string name="trouble_codes_fragment_text_view_reset_successful">Gespeicherte Fehlercodes im Steuergerät erfolgreich gelöscht.</string>
+    <string name="trouble_codes_fragment_text_view_reset_error">Es ist ein Fehler beim Zurücksetzen der Fehlercodes aufgetreten.</string>
+    <string name="trouble_codes_fragment_progress_dialog_reading_codes">Lese Fehlercodes aus…</string>
+    <string name="trouble_codes_fragment_progress_dialog_reading_pending_codes">Lese ausstehende Fehlercodes aus…</string>
+    <string name="trouble_codes_fragment_progress_dialog_reading_permanent_codes">Lese permanente Fehlercodes aus…</string>
+    <string name="trouble_codes_fragment_progress_dialog_resetting_codes">Setze Fehlercodes zurück…</string>
+    <string name="trouble_codes_fragment_trouble_code_separator">:\u0020</string>
+    <string name="trouble_codes_fragment_manufacturerer_description_separator">\u0020->\u0020</string>
+    <string name="trouble_codes_fragment_web_search_prefix">obd error code\u0020</string>
+    <string name="trouble_codes_result_to_string_template">%1$s - %2$s - %3$s</string>
+    <string name="trouble_codes_type_normal">Normal</string>
+    <string name="trouble_codes_type_pending">Ausstehend</string>
+    <string name="trouble_codes_type_permanent">Permanent</string>
+
+    <string name="alert_dialog_quit_app_title">Beenden</string>
+    <string name="alert_dialog_quit_app_message">Soll die App wirklich beendet werden?\nDie OBD2 Datenaufzeichnung könnte unterbrochen werden!</string>
+    <string name="alert_dialog_clear_trouble_codes_title">Fehlercodes löschen</string>
+    <string name="alert_dialog_clear_trouble_codes_message">Sollen die Fehlercodes im Steuergerät wirklich gelöscht werden?\nDas Steuergerät lernt anschließend einige Diagnosedaten neu an!</string>
+    <string name="alert_dialog_web_search_title">Fehlercodesuche</string>
+
+    <string name="read_data_fragment_graph_unit_header">%1$s in %2$s</string>
+    <string name="read_data_fragment_no_widgets_text">Auszulesende Daten können über das Menü ausgewählt werden</string>
+    <string name="read_data_fragment_command_not_supported">Fehler oder nicht unterstützte Abfrage</string>
+
+    <string name="widget_wait_for_value">warte auf Antwort…</string>
+
+    <string name="alert_dialog_web_search_message">Im Internet nach Fehlercode %1$s suchen?</string>
+    <string name="alert_dialog_choose_saved_trouble_codes_title">Eintrag auswählen</string>
+    <string name="alert_dialog_choose_saved_trouble_codes_delete">Eintrag löschen</string>
+    <string name="alert_dialog_choose_saved_trouble_codes_load">Eintrag laden</string>
+    <string name="alert_dialog_choose_saved_trouble_codes_list_title">Datum - Fahrzeugname - Fehlercodes-Art</string>
+    <string name="alert_dialog_no_saved_trouble_codes_title">Keine Einträge vorhanden</string>
+    <string name="alert_dialog_no_saved_trouble_codes_message">Fehlercodes können nach dem Auslesen gespeichert werden.</string>
+    <string name="alert_dialog_delete_trouble_codes_entry_message">Eintrag wirklich löschen?</string>
+    <string name="alert_dialog_delete_all_saved_trouble_codes_title">Fehlercodes löschen</string>
+    <string name="alert_dialog_delete_all_saved_trouble_codes_message">Wirklich alle gespeicherten Fehlercodes löschen?</string>
+
+    <string name="vehicle_popup_new_headline">Ein neues Fahrzeug wurde erkannt</string>
+    <string name="vehicle_popup_edit_headline">Fahrzeug umbenennen</string>
+    <string name="vehicle_popup_new_explanation">Name</string>
+    <string name="vehicle_popup_new_no_name">Unbenannt</string>
+    <string name="vehicle_popup_abort">Abbrechen</string>
+    <string name="vehicle_popup_save">Speichern</string>
+    <string name="vehicle_popup_delete_all">Löschen</string>
+    <string name="vehicle_popup_delete_headline">Daten löschen</string>
+    <string name="vehicle_popup_delete_text">Alle zu diesem Fahrzeug gespeicherten Daten löschen</string>
+
+    <string name="manage_vehicle_fragment_no_vehicles">Keine gespeicherten Fahrzeuge</string>
+    <string name="manage_vehicle_fragment_name">Name: %1$s</string>
+    <string name="manage_vehicle_fragment_vin">VIN: %1$s</string>
+
+    <string name="analyze_data_fragment_no_data_loaded">Keine Daten geladen</string>
+    <string name="analyze_data_fragment_load_data">Daten laden</string>
+    <string name="analyze_data_fragment_show_data_points">Datenbeschriftung</string>
+    <string name="analyze_data_fragment_graph_title">%1$s in %2$s</string>
+    <string name="analyze_data_fragment_load_data_popup_headline">Daten auswählen</string>
+    <string name="analyze_data_fragment_load_data_popup_session">Datensatz</string>
+    <string name="analyze_data_fragment_load_data_popup_command">OBD Kommando</string>
+    <string name="analyze_data_fragment_load_data_popup_abort">Abbrechen</string>
+    <string name="analyze_data_fragment_load_data_popup_load">Laden</string>
+    <string name="analyze_data_fragment_load_data_popup_interpolate">Weniger Werte anzeigen (Kann die Perfomanz auf älteren Geräten verbessern)</string>
+    <string name="analyze_data_fragment_no_sessions_recorded">Keine gespeicherten Daten vorhanden</string>
+    <string name="analyze_data_fragment_export_between_dates">Datensatz als CSV-Datei exportieren</string>
+    <string name="analyze_data_fragment_export_session">Zeitraum als CSV-Datei exportieren</string>
+    <string name="analyze_data_fragment_export_session_popup_header">Zu exportierende Daten auswählen</string>
+    <string name="analyze_data_fragment_export_session_popup_export">Exportieren</string>
+    <string name="analyze_data_fragment_export_session_popup_abort">Abbrechen</string>
+    <string name="analyze_data_fragment_export_session_popup_session">Datensatz</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_start_date">Startdatum</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_end_date">Enddatum</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_header">Zu exportierenden Zeitraum auswählen</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_export">Exportieren</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_abort">Abbrechen</string>
+    <string name="analyze_data_fragment_export_between_dates_popup_end_before_start_date">Das Startdatum liegt nicht vor dem Enddatum</string>
+    <string name="analyze_data_fragment_exporting_data_toast">Exportiere Daten…</string>
+
+    <string name="navigation_drawer_connection_status_vin_headline">VIN: </string>
+    <string name="navigation_drawer_connection_status_no_vin">-</string>
+    <string name="navigation_drawer_connection_status_vehicle_headline">Fahrzeug: </string>
+    <string name="navigation_drawer_connection_status_no_vehicle">-</string>
+    <string name="navigation_drawer_connection_status_obd_connected">OBD verbunden</string>
+    <string name="navigation_drawer_connection_status_obd_not_connected">OBD getrennt</string>
+
+    <string name="unknown_vin">NA</string>
+    <string name="unknown_vin_name">Unbekannt</string>
+    <string name="intent_chooser_web_search">Internetsuche</string>
+
+    <string name="about_the_app">
+        \u0020OBD2Fun\n\n
+        Diese App steht unter der Apache License 2.0\n
+        \u00A92016 Kevin Hendel, Felix Matouschek\n\n
+        Diese App verwendet folgende Bibliotheken:\n\n
+        Timber, \u00A92013 Jake Wharton, Apache License 2.0\n
+        FloatingActionButton, \u00A92015 Dmytro Tarianyk, Apache License 2.0\n
+        AndroidPlot, \u00A92014 AndroidPlot.com, Apache License 2.0\n
+        OBD-Java-API, \u00A92016 Paulo Pires, Apache License 2.0\n\n
+        Diese App verwendet die OBD-II Fehlercodesdatenbank von:\n\n
+        android-obd-reader, \u00A92013 Paulo Pires, Apache License 2.0
+    </string>
+</resources>

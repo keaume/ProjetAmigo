@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF9100</color>
+    <!--Header Background-->
+    <color name="headerGradientCenter">#3F51B5</color>
+    <color name="headerGradientStart">#5c6bc0</color>
+    <color name="headerGradientEnd">#303f9f</color>
+    <!-- Widgets -->
+    <color name="widgetBackground">#283593</color>
+    <color name="widgetText">#FFFFFF</color>
+    <!-- Widget Graph -->
+    <color name="widget_graph_line">#FFFFFF</color>
+    <color name="widget_graph_dots">#FF9100</color>
+    <color name="widget_graph_labels">#FFFFFF</color>
+    <color name="widget_graph_grid">#FFFFFF</color>
+    <!-- Analyze Data Graph -->
+    <color name="analyze_data_graph_title">#000000</color>
+    <color name="analyze_data_graph_line">#283593</color>
+    <color name="analyze_data_graph_dots">#000000</color>
+    <color name="analyze_data_graph_labels">#000000</color>
+    <color name="analyze_data_graph_grid">#000000</color>
+    <color name="analyze_data_graph_fill">#5c6bc0</color>
+    <color name="analyze_data_graph_point_labels">#000000</color>
+    <!-- this is needed as preference_category_material layout uses this color as the text color -->
+    <color name="preference_fallback_accent_color">@color/colorAccent</color>
+</resources>

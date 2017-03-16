@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/main_activity_drawer_menu_read_data"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="@string/main_activity_drawer_menu_read_data"
+            android:checked="true"/>
+        <item
+            android:id="@+id/main_activity_drawer_menu_analyze_data"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="@string/main_activity_drawer_menu_analyze_data"/>
+        <item
+            android:id="@+id/main_activity_drawer_menu_trouble_codes"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/main_activity_drawer_menu_trouble_codes"/>
+
+        <item
+            android:id="@+id/main_activity_drawer_menu_manage_vehicles"
+            android:icon="@android:drawable/ic_menu_save"
+            android:title="@string/main_activity_drawer_menu_manage_vehicles"/>
+        <item
+            android:id="@+id/main_activity_drawer_menu_settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/main_activity_drawer_menu_settings"/>
+    </group>
+    <group
+        android:checkableBehavior="none">
+        <item
+            app:actionLayout="@layout/manage_connection_switch"
+            android:id="@+id/main_activity_drawer_menu_manage_connection"
+            android:title="@string/main_activity_drawer_menu_manage_connection"/>
+    </group>
+
+</menu>

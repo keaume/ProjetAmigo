@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/export_session"
+        android:title="@string/analyze_data_fragment_export_between_dates"/>
+    <item
+        android:id="@+id/export_between_dates"
+        android:title="@string/analyze_data_fragment_export_session"/>
+</menu>

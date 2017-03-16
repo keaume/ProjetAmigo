@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/read_data_fragments_no_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/read_data_fragment_no_widgets_text"/>
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/widgetGrid"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:divider="@android:color/transparent"
+              android:dividerHeight="5.0sp"
+              android:stretchMode="columnWidth"
+              android:gravity="center">
+    </ListView>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/widget_add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorAccent"
+        android:src="@drawable/fab_add"/>
+
+</android.support.design.widget.CoordinatorLayout>

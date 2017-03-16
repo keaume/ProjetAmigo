@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ViewSwitcher
+        android:id="@+id/trouble_codes_fragment_view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+        <TextView
+            android:id="@+id/trouble_codes_fragment_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/trouble_codes_fragment_text_view_no_codes_loaded"/>
+
+        <ListView
+            android:id="@+id/trouble_codes_fragment_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"/>
+    </ViewSwitcher>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/trouble_codes_fragment_fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccent"
+        fab:menu_icon="@drawable/fab_add">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/trouble_codes_fragment_fab_read_trouble_codes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error_white_24dp"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_label="@string/trouble_codes_fragment_fab_read_trouble_codes_text"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/trouble_codes_fragment_fab_read_pending_trouble_codes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_horiz_white_24dp"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_label="@string/trouble_codes_fragment_fab_read_pending_trouble_codes_text"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/trouble_codes_fragment_fab_read_permanent_trouble_codes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_all_inclusive_white_24dp"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_label="@string/trouble_codes_fragment_fab_read_permanent_trouble_codes_text"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/trouble_codes_fragment_fab_clear_trouble_codes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_forever_white_24dp"
+            fab:fab_colorNormal="@color/colorPrimaryDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_label="@string/trouble_codes_fragment_fab_clear_trouble_codes_text"/>
+    </com.github.clans.fab.FloatingActionMenu>
+</android.support.design.widget.CoordinatorLayout>
