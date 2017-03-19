@@ -115,3 +115,4 @@ public class TroubleCodesResult implements Parcelable {
             return null;
         }
     }
+}
