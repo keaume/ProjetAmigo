@@ -48,9 +48,9 @@ public class amigoDataSource {
     };
 
     public amigoDataSource(Context context) {
-        amigoDatabaseHelper amigoDatabaseHelper = amigoDatabaseHelper.getInstance(context);
+        amigoDatabaseHelper AmigoDatabaseHelper = amigoDatabaseHelper.getInstance(context);
         Timber.d("Getting a reference to the database");
-        obdDataDatabase = amigoDatabaseHelper.getWritableDatabase();
+        obdDataDatabase = AmigoDatabaseHelper.getWritableDatabase();
         Timber.d("Got reference: %s", obdDataDatabase.getPath());
     }
 
