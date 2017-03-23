@@ -5,19 +5,19 @@ import android.content.Intent;
 import android.support.v7.preference.PreferenceManager;
 
 import com.github.keaume.amigo.fragment.SettingsFragment;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import timber.log.Timber;
 
-public class amigoApplication extends Application {
+public class AmigoApplication extends Application {
 
-    private static amigoApplication amigoApplication;
-    private static amigoDataSource amigoDataSource;
+    private static AmigoApplication amigoApplication;
+    private static AmigoDataSource amigoDataSource;
 
     @Override
     public void onCreate() {
         super.onCreate();
         amigoApplication = this;
-        amigoDataSource = new amigoDataSource(this);
+        amigoDataSource = new AmigoDataSource(this);
         if (getPreferenceBoolean(SettingsFragment.ENABLE_SAVE_STACKTRACE_KEY, false)) {
             Thread.setDefaultUncaughtExceptionHandler(new amigoLogUtility());
         }

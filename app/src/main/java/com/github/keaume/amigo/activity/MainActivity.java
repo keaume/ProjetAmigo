@@ -32,7 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.AmigoApplication;
 import com.github.keaume.amigo.R;
 import com.github.keaume.amigo.fragment.AnalyzeDataFragment;
 import com.github.keaume.amigo.fragment.ManageVehiclesFragment;
@@ -48,7 +48,7 @@ import com.github.keaume.amigo.interfaces.SetDrawerStateInterface;
 import com.github.keaume.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
 import com.github.keaume.amigo.obd.ObdBroadcastIntent;
 import com.github.keaume.amigo.obd.ObdConnectionState;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartScreenCallback, SetActionBarTitleInterface, SetSelectedDrawerMenuItemInterface, SetDrawerStateInterface, GetIsObdConnectionActiveInterface, GetCurrentVinInterface, GetCurrentSessionIdInterface {
@@ -412,8 +412,8 @@ public class MainActivity extends AppCompatActivity implements PreferenceFragmen
         }
         if (vin != null && isObdConnectionActive()) {
             statusVin.setText(vin);
-            if(amigoApplication.getNameForVin(vin) != null){
-                statusVehicle.setText(amigoApplication.getNameForVin(vin));
+            if(AmigoApplication.getNameForVin(vin) != null){
+                statusVehicle.setText(AmigoApplication.getNameForVin(vin));
             }
             else{
                 statusVehicle.setText(getString(R.string.vehicle_popup_new_no_name));
@@ -425,7 +425,7 @@ public class MainActivity extends AppCompatActivity implements PreferenceFragmen
     }
 
     private void vehiclePopup(final String vin){
-        final amigoDataSource dataSource = new amigoDataSource(this);
+        final AmigoDataSource dataSource = new AmigoDataSource(this);
         if (dataSource.getNameForVin(vin) == null) {
             Timber.d("Unknown VIN: '%s', showing vehiclePopup", vin);
             @SuppressLint("InflateParams") final View popupView = this.getLayoutInflater().inflate(R.layout.vehicle_popup, null);

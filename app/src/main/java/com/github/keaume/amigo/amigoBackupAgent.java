@@ -8,7 +8,7 @@ import android.content.Context;
 import com.github.keaume.amigo.sql.amigoDatabaseHelper;
 import timber.log.Timber;
 
-public class amigoBackupAgent extends BackupAgentHelper {
+public class AmigoBackupAgent extends BackupAgentHelper {
 
     private static final String DEFAULT_SHARED_PREFERENCES = "com.github.keaume.amigo_preferences";
     private static final String DEFAULT_SHARED_PREFERENCES_BACKUP_KEY = "default_shared_preferences";

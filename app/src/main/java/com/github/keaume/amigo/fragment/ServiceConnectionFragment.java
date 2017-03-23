@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.Fragment;
 
-import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.AmigoApplication;
 import com.github.keaume.amigo.service.AbstractObdService;
 import com.github.keaume.amigo.service.BluetoothObdService;
 import com.github.keaume.amigo.service.ObdDataRecordingService;
@@ -24,7 +24,7 @@ public class ServiceConnectionFragment extends Fragment {
         public void onServiceConnected(ComponentName className, IBinder binder) {
             Timber.d(className.toString(), " service is bound");
             obdConnectionService = ((AbstractObdService.AbstractObdServiceBinder) binder).getService();
-            if (amigoApplication.getPreferenceBoolean(SettingsFragment.CONNECT_ON_STARTUP_KEY, false)) {
+            if (AmigoApplication.getPreferenceBoolean(SettingsFragment.CONNECT_ON_STARTUP_KEY, false)) {
                 obdConnectionService.startObdConnection();
             }
         }

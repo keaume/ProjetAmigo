@@ -16,7 +16,7 @@ import com.github.keaume.amigo.obd.ObdCommandJobResult;
 import com.github.keaume.amigo.obd.ObdCommandType;
 import timber.log.Timber;
 
-public class amigoDataSource {
+public class AmigoDataSource {
 
     private static final String ISO_8601_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss.SSSZ";
 
@@ -47,7 +47,7 @@ public class amigoDataSource {
             amigoDatabaseHelper.TABLE_VIN_MAPPINGS_COLUMN_VIN
     };
 
-    public amigoDataSource(Context context) {
+    public AmigoDataSource(Context context) {
         amigoDatabaseHelper AmigoDatabaseHelper = amigoDatabaseHelper.getInstance(context);
         Timber.d("Getting a reference to the database");
         obdDataDatabase = AmigoDatabaseHelper.getWritableDatabase();

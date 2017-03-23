@@ -2,14 +2,13 @@ package com.github.keaume.amigo.sql;
 
         import android.os.Parcel;
         import android.os.Parcelable;
-        import android.support.annotation.NonNull;
 
         import java.text.SimpleDateFormat;
         import java.util.Date;
         import java.util.List;
         import java.util.Locale;
 
-        import com.github.keaume.amigo.amigoApplication;
+        import com.github.keaume.amigo.AmigoApplication;
         import com.github.keaume.amigo.R;
 
 public class TroubleCodesResult implements Parcelable {
@@ -50,11 +49,11 @@ public class TroubleCodesResult implements Parcelable {
 
     @Override
     public String toString() {
-        String nameForVin = amigoApplication.getNameForVin(vin);
+        String nameForVin = AmigoApplication.getNameForVin(vin);
         if (nameForVin == null) {
-            nameForVin = amigoApplication.getResourceString(R.string.unknown_vin_name);
+            nameForVin = AmigoApplication.getResourceString(R.string.unknown_vin_name);
         }
-        return String.format(amigoApplication.getResourceString(R.string.trouble_codes_result_to_string_template), getFormattedDate(), nameForVin, amigoApplication.getResourceString(type.getStringResourceId()));
+        return String.format(AmigoApplication.getResourceString(R.string.trouble_codes_result_to_string_template), getFormattedDate(), nameForVin, AmigoApplication.getResourceString(type.getStringResourceId()));
     }
 
     @Override

@@ -6,27 +6,27 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.AmigoApplication;
 import com.github.keaume.amigo.R;
 import com.github.keaume.amigo.obd.ObdCommandType;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 
 public class Session {
     private final String sessionId;
     private List<ObdCommandType> obdCommandTypes = new ArrayList<>();
-    private final String dateString;
+    private final String sessionDate;
     private final String vehicle;
 
-    public Session(String sessionId, amigoDataSource amigoFunDataSource){
+    public Session(String sessionId, AmigoDataSource amigoFunDataSource){
         this.sessionId = sessionId;
 
-        this.obdCommandTypes = amigoDataSource.getCommandTypesForSession(sessionId);
-        this.dateString = sessionToDate(sessionId);
-        String vehicleTemp = amigoDataSource.getNameForVin(amigoDataSource.getVinForSession(sessionId));
+        this.obdCommandTypes = amigoFunDataSource.getCommandTypesForSession(sessionId);
+        this.sessionDate = sessionToDate(sessionId);
+        String vehicleTemp = amigoFunDataSource.getNameForVin(amigoFunDataSource.getVinForSession(sessionId));
         if (vehicleTemp != null) {
             this.vehicle = vehicleTemp;
         } else {
-            this.vehicle = amigoApplication.getResourceString(R.string.unknown_vin_name);
+            this.vehicle = AmigoApplication.getResourceString(R.string.unknown_vin_name);
         }
     }
 
@@ -39,7 +39,7 @@ public class Session {
     }
 
     public String toString(){
-        return this.dateString + " - " + this.vehicle;
+        return this.sessionDate + " - " + this.vehicle;
     }
 
     private String sessionToDate(String session){

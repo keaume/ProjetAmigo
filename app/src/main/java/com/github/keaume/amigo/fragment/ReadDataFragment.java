@@ -110,6 +110,7 @@ public class ReadDataFragment extends Fragment {
         }
     }
 
+    
     private void addWidget(DataWidget widget){
         widgetList.add(widget);
         refreshGrid();

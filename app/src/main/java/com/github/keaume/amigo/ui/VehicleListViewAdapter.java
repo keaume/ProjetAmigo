@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import com.github.keaume.amigo.R;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import com.github.keaume.amigo.sql.SavedVehicles;
 
 public class VehicleListViewAdapter extends BaseAdapter {
@@ -72,7 +72,7 @@ public class VehicleListViewAdapter extends BaseAdapter {
         holder.vehicleDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final amigoDataSource dataSource = new amigoDataSource(context);
+                final AmigoDataSource dataSource = new AmigoDataSource(context);
                 new AlertDialog.Builder(context)
                         .setTitle(R.string.vehicle_popup_delete_headline)
                         .setMessage(R.string.vehicle_popup_delete_text)
@@ -97,7 +97,7 @@ public class VehicleListViewAdapter extends BaseAdapter {
         holder.vehicleEditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final amigoDataSource dataSource = new amigoDataSource(context);
+                final AmigoDataSource dataSource = new AmigoDataSource(context);
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
                 @SuppressLint("InflateParams") final View popupView = inflater.inflate(R.layout.vehicle_popup,null);
                 new AlertDialog.Builder(context)
