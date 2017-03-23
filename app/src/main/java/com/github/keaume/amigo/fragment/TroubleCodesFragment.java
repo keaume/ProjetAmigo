@@ -54,7 +54,7 @@ import com.github.keaume.amigo.obd.ObdCommandJob;
 import com.github.keaume.amigo.obd.ObdCommandJobResult;
 import com.github.keaume.amigo.obd.ObdCommandType;
 import com.github.keaume.amigo.obd.ObdConnectionState;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import com.github.keaume.amigo.sql.TroubleCodesResult;
 import timber.log.Timber;
 
@@ -62,7 +62,7 @@ public class TroubleCodesFragment extends Fragment {
 
     private LocalBroadcastManager localBroadcastManager;
     private ArrayAdapter<String> troubleCodesArrayAdapter;
-    private amigoDataSource amigoDataSource;
+    private AmigoDataSource amigoDataSource;
     private ViewSwitcher viewSwitcher;
     private FloatingActionMenu floatingActionMenu;
     private ArrayList<FloatingActionButton> floatingActionButtons;
@@ -158,7 +158,7 @@ public class TroubleCodesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         localBroadcastManager = LocalBroadcastManager.getInstance(getActivity().getApplicationContext());
-        amigoDataSource = new amigoDataSource(getActivity().getApplicationContext());
+        amigoDataSource = new AmigoDataSource(getActivity().getApplicationContext());
         troubleCodesArrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1);
         troubleCodesListHeader = new TextView(getActivity());
         floatingActionButtons = new ArrayList<>();

@@ -53,7 +53,7 @@ import com.github.keaume.amigo.export.CsvExport;
 import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
 import com.github.keaume.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
 import com.github.keaume.amigo.obd.ObdCommandType;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import com.github.keaume.amigo.sql.ObdData;
 import com.github.keaume.amigo.ui.Session;
 import com.github.keaume.amigo.ui.TextViewDatePickerDialog;
@@ -73,7 +73,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
     private long maxXYx;
 
     private List<Session> sessionList;
-    private amigoDataSource dataSource;
+    private AmigoDataSource dataSource;
     private ArrayList<ObdData> rawObdData;
     private List<ObdCommandType> commandTypesInSession = new ArrayList<>();
     private Spinner commandTypeSpinner;
@@ -98,7 +98,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
         Timber.d("onCreate called");
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        dataSource = new amigoDataSource(getActivity().getApplicationContext());
+        dataSource = new AmigoDataSource(getActivity().getApplicationContext());
 
         if (savedInstanceState != null) {
             Timber.d("Restoring variables previous states");
@@ -549,7 +549,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
 
     private void exportSession(){
         final Activity activity = getActivity();
-        final amigoDataSource dataSource = new amigoDataSource(activity);
+        final AmigoDataSource dataSource = new AmigoDataSource(activity);
         LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") final View exportSessionView = inflater.inflate(R.layout.export_session_popup, null);
         new AlertDialog.Builder(activity)
@@ -591,7 +591,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
 
     private void exportBetweenDates(){
         final Activity activity = getActivity();
-        final amigoDataSource dataSource = new amigoDataSource(activity);
+        final AmigoDataSource dataSource = new AmigoDataSource(activity);
         final LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         @SuppressLint("InflateParams") final View exportBetweenDatesView = inflater.inflate(R.layout.export_between_dates_popup, null);
         new AlertDialog.Builder(activity)

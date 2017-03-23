@@ -74,7 +74,7 @@ public final class amigoLogUtility implements Thread.UncaughtExceptionHandler {
             Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
             Uri uri = Uri.fromFile(file);
             intent.setData(uri);
-            amigoApplication.sendBroadcastStatic(intent);
+            AmigoApplication.sendBroadcastStatic(intent);
         } else {
             Timber.e("Failed to create directory %s", externalStorageSaveDirectory.getAbsolutePath());
         }

@@ -1,6 +1,6 @@
 package com.github.keaume.amigo.sql;
 
-import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.AmigoApplication;
 import com.github.keaume.amigo.R;
 
 public class SavedVehicles {
@@ -21,9 +21,9 @@ public class SavedVehicles {
     }
 
     public void refreshName() {
-        name = amigoApplication.getNameForVin(vin);
+        name = AmigoApplication.getNameForVin(vin);
         if (name == null) {
-            name = amigoApplication.getResourceString(R.string.unknown_vin_name);
+            name = AmigoApplication.getResourceString(R.string.unknown_vin_name);
         }
     }
 }

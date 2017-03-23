@@ -24,7 +24,7 @@ import com.github.keaume.amigo.obd.ObdCommandJob;
 import com.github.keaume.amigo.obd.ObdCommandJobResult;
 import com.github.keaume.amigo.obd.ObdCommandType;
 import com.github.keaume.amigo.obd.ObdConnectionState;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import timber.log.Timber;
 
 public class ObdDataRecordingService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener {
@@ -36,7 +36,7 @@ public class ObdDataRecordingService extends Service implements SharedPreference
 
     private LocalBroadcastManager localBroadcastManager;
     private SharedPreferences sharedPrefs;
-    private amigoDataSource amigoDataSource;
+    private AmigoDataSource amigoDataSource;
 
     private final HashSet<ObdCommandType> registeredObdCommandTypes = new HashSet<>();
 
@@ -85,7 +85,7 @@ public class ObdDataRecordingService extends Service implements SharedPreference
         localBroadcastManager.registerReceiver(obdConnectionStateReceiver, new IntentFilter(ObdBroadcastIntent.OBD_CONNECTION_STATE));
 
         Timber.d("Opening database");
-        amigoDataSource = new amigoDataSource(getApplicationContext());
+        amigoDataSource = new AmigoDataSource(getApplicationContext());
 
         registerForObdCommandJobResultBroadcasts();
     }

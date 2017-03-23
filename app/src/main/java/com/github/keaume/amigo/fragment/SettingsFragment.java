@@ -28,7 +28,7 @@ import com.github.pires.obd.enums.ObdProtocols;
 import java.util.ArrayList;
 import java.util.Set;
 
-import com.github.keaume.amigo.amigoApplication;
+import com.github.keaume.amigo.AmigoApplication;
 import com.github.keaume.amigo.amigoLogUtility;
 import com.github.keaume.amigo.R;
 import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
@@ -319,8 +319,8 @@ public class SettingsFragment extends PreferenceFragmentCompatFix implements Sha
     }
 
     public static int getObdCommandJobDelay() {
-        String defaultObdCommandJobDelayString = amigoApplication.getResourceString(R.string.obd_update_delay_preference_default);
-        String obdCommandJobDelayString = amigoApplication.getPreferenceString(OBD_UPDATE_DELAY_KEY, defaultObdCommandJobDelayString);
+        String defaultObdCommandJobDelayString = AmigoApplication.getResourceString(R.string.obd_update_delay_preference_default);
+        String obdCommandJobDelayString = AmigoApplication.getPreferenceString(OBD_UPDATE_DELAY_KEY, defaultObdCommandJobDelayString);
         int obdCommandJobDelay;
         try {
             obdCommandJobDelay = (int) (Double.parseDouble(obdCommandJobDelayString) * 1000);

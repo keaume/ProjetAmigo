@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import com.github.keaume.amigo.R;
 import com.github.keaume.amigo.interfaces.SetActionBarTitleInterface;
 import com.github.keaume.amigo.interfaces.SetSelectedDrawerMenuItemInterface;
-import com.github.keaume.amigo.sql.amigoDataSource;
+import com.github.keaume.amigo.sql.AmigoDataSource;
 import com.github.keaume.amigo.sql.SavedVehicles;
 import com.github.keaume.amigo.ui.VehicleListViewAdapter;
 import timber.log.Timber;
@@ -23,7 +23,7 @@ public class ManageVehiclesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Timber.d("onCreateView called");
         View view = inflater.inflate(R.layout.manage_vehicles_fragment, container, false);
-        amigoDataSource dataSource = new amigoDataSource(getActivity().getApplicationContext());
+        AmigoDataSource dataSource = new AmigoDataSource(getActivity().getApplicationContext());
 
         Timber.d("Fill list with saved vehicles");
         ArrayList<SavedVehicles> vehicleList = dataSource.getAllSavedVehicles();
