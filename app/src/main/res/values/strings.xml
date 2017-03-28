@@ -14,7 +14,7 @@
  <string name="main_activity_drawer_menu_trouble_codes">Lecture des codes erreurs</string>
  <string name="main_activity_drawer_menu_manage_connection"> Connexion à l\'OBD</string>
  <string name="main_activity_drawer_menu_manage_vehicles">Gestion du véhicule</string>
- <string name="main_activity_drawer_menu_settings">Reglages</string>
+ <string name="main_activity_drawer_menu_settings">Réglages</string>
  <string name="settings_fragment_menu_request_backup">Sauvegarde</string>
  <string name="settings_fragment_menu_save_log_to_file">Logs actuels protégés</string>
  <string name="settings_fragment_menu_about_the_app">A propos d\'AmiGo</string>
@@ -70,7 +70,7 @@
  <string name="trouble_codes_fragment_list_view_title_template">%1$s\nNomVehicule: %2$s\nVIN: %3$s\Sélectionner: %4$s</string>
  <string name="trouble_codes_fragment_list_view_title_now">Maintenant</string>
  <string name="trouble_codes_fragment_list_view_unknown_trouble_code">Codes erreurs inconnus</string>
- <string name="trouble_codes_fragment_text_view_no_codes_loaded">Fehlercodes können über die Menüs ausgelesen oder geladen werden.</string>
+ <string name="trouble_codes_fragment_text_view_no_codes_loaded">Appuyez sur + pour choisir vos Code d'erreurs.</string>
  <string name="trouble_codes_fragment_text_view_no_codes_received">Pas de Codes erreurs sur ce véhicule.</string>
  <string name="trouble_codes_fragment_text_view_no_pending_codes_received">Pas de Codes erreurs suspendus sur ce véhicule.</string>
  <string name="trouble_codes_fragment_text_view_no_permanent_codes_received">Pas de Codes erreurs permanents sur ce véhicule.</string>
@@ -83,7 +83,7 @@
  <string name="trouble_codes_fragment_progress_dialog_resetting_codes">Réinitialisation des Codes erreurs…</string>
  <string name="trouble_codes_fragment_trouble_code_separator">:\u0020</string>
  <string name="trouble_codes_fragment_manufacturerer_description_separator">\u0020->\u0020</string>
- <string name="trouble_codes_fragment_web_search_prefix">obd error code\u0020</string>
+ <string name="trouble_codes_fragment_web_search_prefix">OBD error code\u0020</string>
  <string name="trouble_codes_result_to_string_template">%1$s - %2$s - %3$s</string>
  <string name="trouble_codes_type_normal">Normal</string>
  <string name="trouble_codes_type_pending">Suspendu</string>
@@ -96,23 +96,23 @@
  <string name="alert_dialog_web_search_title">Recherche de Codes erreurs…</string>
 
  <string name="read_data_fragment_graph_unit_header">%1$s in %2$s</string>
- <string name="read_data_fragment_no_widgets_text">Auszulesende Daten können über das Menü ausgewählt werden</string>
+ <string name="read_data_fragment_no_widgets_text">Appuyez sur + pour choisir vos données</string>
  <string name="read_data_fragment_command_not_supported">Erreur</string>
 
  <string name="widget_wait_for_value">En attente de réponse…</string>
 
- <string name="alert_dialog_web_search_message">Im Internet nach Fehlercode %1$s suchen?</string>
- <string name="alert_dialog_choose_saved_trouble_codes_title">Eintrag auswählen</string>
- <string name="alert_dialog_choose_saved_trouble_codes_delete">Eintrag löschen</string>
- <string name="alert_dialog_choose_saved_trouble_codes_load">Eintrag laden</string>
- <string name="alert_dialog_choose_saved_trouble_codes_list_title">Datum - Fahrzeugname - Fehlercodes-Art</string>
- <string name="alert_dialog_no_saved_trouble_codes_title">Keine Einträge vorhanden</string>
- <string name="alert_dialog_no_saved_trouble_codes_message">Fehlercodes können nach dem Auslesen gespeichert werden.</string>
- <string name="alert_dialog_delete_trouble_codes_entry_message">Voulez-vous vraiment supprimer les Code errurs ?</string>
+ <string name="alert_dialog_web_search_message">Voulez-vous rechercher le Code d'erreur %1$s sur Internet?</string>
+ <string name="alert_dialog_choose_saved_trouble_codes_title"> Sélectionner</string>
+ <string name="alert_dialog_choose_saved_trouble_codes_delete">Supprimer</string>
+ <string name="alert_dialog_choose_saved_trouble_codes_load">Charger</string>
+ <string name="alert_dialog_choose_saved_trouble_codes_list_title">Date - Nom du véhicule - Code d'erreur-Type</string>
+ <string name="alert_dialog_no_saved_trouble_codes_title">Pas d'entrée disponible</string>
+ <string name="alert_dialog_no_saved_trouble_codes_message">Les Codes d'erreurs peuvent être sélectionné depuis les Codes d'erreurs sauvegardés.</string>
+ <string name="alert_dialog_delete_trouble_codes_entry_message">Voulez-vous vraiment supprimer les Code erreurs ?</string>
  <string name="alert_dialog_delete_all_saved_trouble_codes_title">Code erreurs supprimés</string>
  <string name="alert_dialog_delete_all_saved_trouble_codes_message">Voulez-vous vraiment supprimer les Code erreurs enregistrés?</string>
 
- <string name="vehicle_popup_new_headline">Un nouveau véhicule est présent</string>
+ <string name="vehicle_popup_new_headline">Un nouveau véhicule est présent !</string>
  <string name="vehicle_popup_edit_headline">Changer le nom du Véhicule</string>
  <string name="vehicle_popup_new_explanation">Nom</string>
  <string name="vehicle_popup_new_no_name">Nom du véhicule changé</string>
@@ -128,27 +128,27 @@
 
  <string name="analyze_data_fragment_no_data_loaded">Pas de données chargées</string>
  <string name="analyze_data_fragment_load_data">Chargement des données</string>
- <string name="analyze_data_fragment_show_data_points">Datenbeschriftung</string>
+ <string name="analyze_data_fragment_show_data_points">Détails des données</string>
  <string name="analyze_data_fragment_graph_title">%1$s in %2$s</string>
- <string name="analyze_data_fragment_load_data_popup_headline">Daten auswählen</string>
- <string name="analyze_data_fragment_load_data_popup_session">Datensatz</string>
+ <string name="analyze_data_fragment_load_data_popup_headline">Sélectionner les données</string>
+ <string name="analyze_data_fragment_load_data_popup_session">Enregistrement des données</string>
  <string name="analyze_data_fragment_load_data_popup_command">OBD Commandes</string>
  <string name="analyze_data_fragment_load_data_popup_abort">Annuler</string>
  <string name="analyze_data_fragment_load_data_popup_load">Chargement</string>
- <string name="analyze_data_fragment_load_data_popup_interpolate">Weniger Werte anzeigen (Kann die Perfomanz auf älteren Geräten verbessern)</string>
- <string name="analyze_data_fragment_no_sessions_recorded">Keine gespeicherten Daten vorhanden</string>
- <string name="analyze_data_fragment_export_between_dates">Datensatz als CSV-Datei exportieren</string>
- <string name="analyze_data_fragment_export_session">Zeitraum als CSV-Datei exportieren</string>
- <string name="analyze_data_fragment_export_session_popup_header">Zu exportierende Daten auswählen</string>
+ <string name="analyze_data_fragment_load_data_popup_interpolate">Valeurs affichées pourraient être inexactes (Possiblité d'améliorer les performances avec un équipement plus performant)</string>
+ <string name="analyze_data_fragment_no_sessions_recorded">Pas de données stockées présentes</string>
+ <string name="analyze_data_fragment_export_between_dates">Exportation de fichier</string>
+ <string name="analyze_data_fragment_export_session">Exportation de session</string>
+ <string name="analyze_data_fragment_export_session_popup_header">Sélectionner un export pour les fichiers</string>
  <string name="analyze_data_fragment_export_session_popup_export">Exporter</string>
  <string name="analyze_data_fragment_export_session_popup_abort">Annuler</string>
- <string name="analyze_data_fragment_export_session_popup_session">Datensatz</string>
- <string name="analyze_data_fragment_export_between_dates_popup_start_date">Startdatum</string>
- <string name="analyze_data_fragment_export_between_dates_popup_end_date">Enddatum</string>
- <string name="analyze_data_fragment_export_between_dates_popup_header">Zu exportierenden Zeitraum auswählen</string>
+ <string name="analyze_data_fragment_export_session_popup_session">Enregistrement de Session</string>
+ <string name="analyze_data_fragment_export_between_dates_popup_start_date">Début</string>
+ <string name="analyze_data_fragment_export_between_dates_popup_end_date">Fin</string>
+ <string name="analyze_data_fragment_export_between_dates_popup_header">Sélectionnez la date à exporter</string>
  <string name="analyze_data_fragment_export_between_dates_popup_export">Exporter</string>
  <string name="analyze_data_fragment_export_between_dates_popup_abort">Annuler</string>
- <string name="analyze_data_fragment_export_between_dates_popup_end_before_start_date">Das Startdatum liegt nicht vor dem Enddatum</string>
+ <string name="analyze_data_fragment_export_between_dates_popup_end_before_start_date">La date de début ne correspond pas à la date de fin</string>
  <string name="analyze_data_fragment_exporting_data_toast">Exportation des données…</string>
 
  <string name="navigation_drawer_connection_status_vin_headline">VIN: </string>
