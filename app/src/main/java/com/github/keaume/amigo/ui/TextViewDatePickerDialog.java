@@ -49,7 +49,7 @@ public class TextViewDatePickerDialog implements View.OnClickListener, android.a
 
     private void setTextViewText(){
 
-        final SimpleDateFormat spinnerDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.GERMANY);
+        final SimpleDateFormat spinnerDateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.FRANCE);
         dateTextView.setText(spinnerDateFormat.format(calendar.getTime()));
     }
 }
