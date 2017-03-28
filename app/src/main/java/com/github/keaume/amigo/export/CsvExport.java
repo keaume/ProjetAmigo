@@ -22,7 +22,7 @@ public class CsvExport{
 
     public CsvExport(ArrayList<ObdData> obdDataList, Date startDate, Date endDate){
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HHmm", Locale.GERMANY);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HHmm", Locale.FRANCE);
         String startDateString = dateFormat.format(startDate);
         String endDateString = dateFormat.format(endDate);
 
@@ -35,7 +35,7 @@ public class CsvExport{
 
         long sessionLong =  Long.parseLong(sessionId);
         Date date = new Date(sessionLong);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HHmm", Locale.GERMANY);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HHmm", Locale.FRANCE);
 
         this.fileName = dateFormat.format(date) + ".csv";
         this.obdDataList = obdDataList;
