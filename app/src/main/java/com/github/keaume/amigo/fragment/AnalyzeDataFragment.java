@@ -233,7 +233,7 @@ public class AnalyzeDataFragment extends Fragment implements View.OnTouchListene
         analyzeDataGraph.getLayoutManager().remove(analyzeDataGraph.getLegendWidget());
         analyzeDataGraph.getGraphWidget().setPadding(70,50,0,50);
         analyzeDataGraph.setDomainValueFormat(new Format() {
-            private final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.GERMANY);
+            private final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.FRANCE);
             @Override
             public StringBuffer format(Object object, @NonNull StringBuffer buffer, @NonNull FieldPosition field) {
                 long timestamp = ((Number) object).longValue();
