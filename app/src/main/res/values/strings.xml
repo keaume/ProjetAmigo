@@ -70,7 +70,7 @@
  <string name="trouble_codes_fragment_list_view_title_template">%1$s\nNomVehicule: %2$s\nVIN: %3$s\Sélectionner: %4$s</string>
  <string name="trouble_codes_fragment_list_view_title_now">Maintenant</string>
  <string name="trouble_codes_fragment_list_view_unknown_trouble_code">Codes erreurs inconnus</string>
- <string name="trouble_codes_fragment_text_view_no_codes_loaded">Appuyez sur + pour choisir vos Code d\'erreurs.</string>
+ <string name="trouble_codes_fragment_text_view_no_codes_loaded">Appuyez sur + pour sélectionner.</string>
  <string name="trouble_codes_fragment_text_view_no_codes_received">Pas de Codes erreurs sur ce véhicule.</string>
  <string name="trouble_codes_fragment_text_view_no_pending_codes_received">Pas de Codes erreurs suspendus sur ce véhicule.</string>
  <string name="trouble_codes_fragment_text_view_no_permanent_codes_received">Pas de Codes erreurs permanents sur ce véhicule.</string>
