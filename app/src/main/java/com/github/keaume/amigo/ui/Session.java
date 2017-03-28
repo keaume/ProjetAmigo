@@ -45,7 +45,7 @@ public class Session {
     private String sessionToDate(String session){
         long sessionLong =  Long.parseLong(session);
         Date date = new Date(sessionLong);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss", Locale.GERMANY);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss", Locale.FRANCE);
         return sdf.format(date);
     }
 
